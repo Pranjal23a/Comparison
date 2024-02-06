@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="css/home.css">
+<br>
+<div class="center">
+
+    <h2>Search Product</h2>
+
+
+    <form id="search-form">
+        <input class="form-style-place" id="search-query" type="text" placeholder="Search For Products and More....."
+            required>
+        <div id="spinner" class="spinner"></div>
+        <input type="submit" id="search-button" value="Search">
+    </form>
+</div>
+<br><br>
+<div class="row">
+
+    <div class="col-6 box">
+        <h2>Amazon</h2>
+        <hr>
+        <div class="outer-div">
+            <div id="amazon-data" class="product-container">
+            </div>
+            <div class="loading" style="display: none;">Loading...</div>
+        </div>
+    </div>
+    <div class="col-6 box">
+        <h2>Flipkart</h2>
+        <hr>
+        <div class="outer-div">
+            <div id="flipkart-data" class="product-container">
+            </div>
+            <div class="loading" style="display: none;">Loading...</div>
+        </div>
+    </div>
+
+</div>
+<script src="/js/script.js"></script>

@@ -1,0 +1,147 @@
+.box {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Style for the product */
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    box-sizing: border-box;
+    /* Ensure padding and border don't affect the width */
+}
+
+/* Style for the product image */
+.product img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* Style for the product name */
+.product h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Style for the price and rating */
+.product p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+/* Style for the "View Product" link */
+.product a {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Hover effect for the "View Product" link */
+.product a:hover {
+    background-color: #45a049;
+}
+
+/* Spinner  */
+/* Add the following CSS for the spinner */
+.spinner {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #3498db;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    animation: spin 1s linear infinite;
+    display: none;
+    position: absolute;
+    top: 15%;
+    right: 44%;
+    transform: translateY(-50%);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.center {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.box {
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.box h2 {
+    color: #333;
+}
+
+.search-form {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+#search-query {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#search-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#search-button:hover {
+    background-color: #45a049;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+}
+
+.col-6 {
+    flex: 0 0 48%;
+}
