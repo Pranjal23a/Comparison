@@ -52,7 +52,7 @@ async function buildData(query) {
         // Extract product information
         productContainer.each((index, element) => {
             const productElement = $(element);
-            const productName = productElement.find('h2 span.a-size-medium').text().trim();
+            const productName = productElement.find('span.a-size-medium.a-color-base.a-text-normal').text().trim();
             const productImage = productElement.find('img.s-image').attr('src');
             let productPrice = productElement.find('.a-price .a-price-whole').text().trim();
             const productRating = productElement.find('.a-icon-star-small .a-icon-alt').text().trim();
@@ -76,12 +76,8 @@ async function buildData(query) {
             }
         });
 
-        if (productsData) {
-            console.log(productsData);
-            return productsData;
-        }
-        // // when products are vertical
-        else {
+        console.log(productsData);
+        if (productsData.length < 1) {
             const productsData = [];
             const productContainer = $('div.a-section.a-spacing-base');
 
@@ -108,12 +104,12 @@ async function buildData(query) {
                     rating: productRating,
                     url: productLink,
                 };
-                if (productName && productImage && productPrice && productRating && productLink) {
-                    productsData.push(productData);
-                }
+                // if (productName && productImage && productPrice && productRating && productLink) {
+                productsData.push(productData);
+                // }
             });
-            return productsData;
         }
+        return productsData;
     }
     catch (error) {
         console.error('Error in getting data:', error);

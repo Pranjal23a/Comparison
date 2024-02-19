@@ -67,15 +67,15 @@ async function buildData(query) {
                 name: productName,
                 image: productImage,
                 price: productPrice,
-                rating: productRating,
+                rating: productRating + " out of 5 stars",
                 url: productLink,
             };
-            // if (productName && productImage && productPrice && productRating && productLink) {
-            productsData.push(productData);
-            // }
+            if (productName && productImage && productPrice && productRating && productLink) {
+                productsData.push(productData);
+            }
         });
 
-        // console.log(productsData);
+        console.log(productsData);
         if (productsData.length < 1) {
             productContainer = $('div._4ddWXP');
 
@@ -85,7 +85,7 @@ async function buildData(query) {
                 productElement = $(element);
                 productName = productElement.find('a.s1Q9rs').text().trim();
                 productImage = productElement.find('img._396cs4').attr('src');
-                productPrice = productElement.find('div._25b18c div._30jeq3._1_WHN1').text().trim();
+                productPrice = productElement.find('div._25b18c div._30jeq3').text().trim();
                 productRating = productElement.find('div._3LWZlK').text().trim();
                 relativeProductLink = productElement.find('a._8VNy32').attr('href');
 
@@ -106,8 +106,8 @@ async function buildData(query) {
                 }
             });
             console.log(productsData);
-            return productsData;
         }
+        return productsData;
     } catch (error) {
         console.error('Error in getting data:', error);
         throw error;
