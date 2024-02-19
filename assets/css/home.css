@@ -22,8 +22,9 @@
 
 /* Style for the product image */
 .product img {
-    max-width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
     margin-bottom: 10px;
 }
 
@@ -67,7 +68,7 @@
     animation: spin 1s linear infinite;
     display: none;
     position: absolute;
-    top: 15%;
+    top: 14%;
     right: 44%;
     transform: translateY(-50%);
 }

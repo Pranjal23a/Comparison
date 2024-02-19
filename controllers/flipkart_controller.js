@@ -75,7 +75,7 @@ async function buildData(query) {
             }
         });
 
-        console.log(productsData);
+        // console.log(productsData);
         if (productsData.length < 1) {
             productContainer = $('div._4ddWXP');
 
@@ -98,14 +98,14 @@ async function buildData(query) {
                     name: productName,
                     image: productImage,
                     price: productPrice,
-                    rating: productRating,
+                    rating: productRating + " out of 5 stars",
                     url: productLink,
                 };
                 if (productName && productImage && productPrice && productRating && productLink) {
                     productsData.push(productData);
                 }
             });
-            console.log(productsData);
+            // console.log(productsData);
         }
         return productsData;
     } catch (error) {

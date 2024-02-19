@@ -76,7 +76,7 @@ async function buildData(query) {
             }
         });
 
-        console.log(productsData);
+        // console.log(productsData);
         if (productsData.length < 1) {
             const productsData = [];
             const productContainer = $('div.a-section.a-spacing-base');
