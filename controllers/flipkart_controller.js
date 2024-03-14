@@ -119,7 +119,7 @@ module.exports.ApiData = async function (req, res) {
     try {
         let searchQuery = req.params.name;
         let searchResults = await buildData(searchQuery);
-        // console.log(searchResults);
+        console.log(searchResults);
         return res.json(searchResults);
 
     } catch (err) {

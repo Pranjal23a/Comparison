@@ -14,7 +14,8 @@
     border: 1px solid #ddd;
     padding: 10px;
     margin: 10px;
-    width: 200px;
+    width: 220px;
+    /* Increased width for better visibility */
     text-align: center;
     box-sizing: border-box;
     /* Ensure padding and border don't affect the width */
@@ -22,9 +23,12 @@
 
 /* Style for the product image */
 .product img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+    width: 100%;
+    /* Ensure the image fills the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: contain;
+    /* Fit the image within the container */
     margin-bottom: 10px;
 }
 
@@ -56,6 +60,7 @@
 .product a:hover {
     background-color: #45a049;
 }
+
 
 /* Spinner  */
 /* Add the following CSS for the spinner */

@@ -12,7 +12,6 @@ $(document).ready(function () {
         event.preventDefault();
         AmazonResults.html('');
         FlipkartResults.html('');
-
         const searchQuery = searchQueryInput.val();
         searchQueryInput.blur();
         spinner.show();
@@ -24,11 +23,13 @@ $(document).ready(function () {
                 const [amazonData, flipkartData] = await Promise.all([
                     $.ajax({
                         url: `/amazon/api/${searchQuery}`,
-                        dataType: 'json'
+                        dataType: 'json',
+                        timeout: 15000,
                     }),
                     $.ajax({
                         url: `/flipkart/api/${searchQuery}`,
-                        dataType: 'json'
+                        dataType: 'json',
+                        timeout: 15000,
                     })
                 ]);
 
